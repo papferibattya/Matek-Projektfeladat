@@ -44,6 +44,22 @@ namespace Kalapacsvetes
             {
                 Console.WriteLine($"Hiba történt: {ex.Message}");
             }
+
+            Console.WriteLine("\nStatisztika az adatokról");
+
+            double atlag = sportolok.Average(Sportolo => Sportolo.Eredmeny);
+            Console.Write($"\nEredmények átlaga: {atlag} m");
+            
+            double szoras = Math.Sqrt(sportolok.Average(Sportolo => Math.Pow(Sportolo.Eredmeny - atlag, 2)));
+            Console.Write($"\nEredmények szórása: {szoras:F2} m");
+            
+            double minimum = sportolok.Min(Sportolo => Sportolo.Eredmeny);
+            Console.Write($"\nEredmények minimuma: {minimum} m");
+            
+            double maximum = sportolok.Max(Sportolo => Sportolo.Eredmeny);
+            Console.Write($"\nEredmények maximuma: {maximum} m");
+
+            Console.ReadLine();
         }
     }
 }
