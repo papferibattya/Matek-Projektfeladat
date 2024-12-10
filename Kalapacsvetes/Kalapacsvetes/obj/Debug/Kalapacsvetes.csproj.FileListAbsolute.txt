@@ -12,3 +12,10 @@ C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\
 C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.CoreCompileInputs.cache
 C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.exe
 C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.pdb
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.AssemblyReference.cache
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.CoreCompileInputs.cache
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.exe
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.pdb
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.exe.config
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.exe
+D:\iskola\Matek-Projektfeladat-main\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.pdb

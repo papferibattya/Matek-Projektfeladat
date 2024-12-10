@@ -12,6 +12,7 @@ namespace Kalapacsvetes
     {
         static void Main(string[] args)
         {
+            //Itt beolvassuk majd kiiratjuk a fájl tartalmát.
             string filePath = "kalapacsvetes.txt"; 
             List<Sportolo> sportolok = new List<Sportolo>();
 
@@ -22,7 +23,7 @@ namespace Kalapacsvetes
                 for (int i = 1; i < lines.Length; i++) 
                 {
                     string[] data = lines[i].Split(';');
-
+                     
                     int helyezes = int.Parse(data[0]);
                     double eredmeny = double.Parse(data[1].Replace(',', '.'), CultureInfo.InvariantCulture);
                     string nev = data[2];
@@ -46,7 +47,7 @@ namespace Kalapacsvetes
             }
 
             Console.WriteLine("\nStatisztika az adatokról");
-
+            //Itt számoljuk ki az átlagot szórást minimum és maximumot.
             double atlag = sportolok.Average(Sportolo => Sportolo.Eredmeny);
             Console.Write($"\nEredmények átlaga: {atlag} m");
             
@@ -58,6 +59,37 @@ namespace Kalapacsvetes
             
             double maximum = sportolok.Max(Sportolo => Sportolo.Eredmeny);
             Console.Write($"\nEredmények maximuma: {maximum} m");
+
+
+           // Itt helyszín és minimális eredmény alapján szűrünk amit majd kiiratunk konzolra és txt fájlba is.
+            Console.Write("\nAdd meg a helyszínt, amelyre szűrni szeretnél: ");
+            string szurtHelyszin = Console.ReadLine();
+
+            Console.Write("\nAdd meg a minimális eredményt: ");
+            double szurtEredmeny = double.Parse(Console.ReadLine());
+
+            
+            List<string> szurtSportolok = new List<string>();
+            foreach (var sportolo in sportolok)
+            {
+                if (sportolo.Helyszin == szurtHelyszin && sportolo.Eredmeny >= szurtEredmeny)
+                {
+                    szurtSportolok.Add($"{sportolo.Nev} - {sportolo.Eredmeny}m");
+                }
+            }
+
+            
+            Console.Write("\nSzűrés eredménye a konzolon:");
+            foreach (var sor in szurtSportolok)
+            {
+                Console.Write(sor);
+            }
+
+            
+            string fajlNev = "szurt_eredmenyek.txt";
+            File.WriteAllLines(fajlNev, szurtSportolok);
+
+            Console.Write($"\nAz eredményeket elmentettem a(z) {fajlNev} fájlba.");
 
             Console.ReadLine();
         }
