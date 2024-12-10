@@ -91,6 +91,7 @@ namespace Kalapacsvetes
 
             Console.Write($"\nAz eredményeket elmentettem a(z) {fajlNev} fájlba.");
 
+
             Console.ReadLine();
         }
     }
