@@ -1,0 +1,14 @@
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.exe.config
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.exe
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.pdb
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.AssemblyReference.cache
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.CoreCompileInputs.cache
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.exe
+H:\c#\12.osztaly\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.pdb
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.exe.config
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.exe
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\bin\Debug\Kalapacsvetes.pdb
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.AssemblyReference.cache
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.csproj.CoreCompileInputs.cache
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.exe
+C:\Users\Bogi\Documents\GitHub\Matek-Projektfeladat\Kalapacsvetes\Kalapacsvetes\obj\Debug\Kalapacsvetes.pdb
