@@ -5,3 +5,17 @@
 .head-card-text-title  {
     color: black;  
 }
+
+footer {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+footer section {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #333;
+}
