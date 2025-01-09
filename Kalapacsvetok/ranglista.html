@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -6,33 +7,187 @@
     <title>Kalapácsvetők</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+
     <nav class="navbar navbar-expand-lg">
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Kezdőlap<span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ranglista.html">Ranglista</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="versenyek.html">Versenyek</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="statisztika.html">Statisztikák</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="rekordok.html">Rekordok</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#footer">Kapcsolat</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Kezdőlap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ranglista.html">Ranglista</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="versenyek.html">Versenyek</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="statisztika.html">Statisztikák</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rekordok.html">Rekordok</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Kapcsolat</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
+    <div class="ranglista-container">
+        <h1>Ranglista</h1>
+
+        <div class="ranglista-filters">
+            <form id="filterForm">
+                <label for="year">Év:</label>
+                <select id="year" name="year">
+                    <option value="">Mind</option>
+                    <option value="1984">1984</option>
+                    <option value="1985">1985</option>
+                    <option value="1986">1986</option>
+                    <option value="1988">1988</option>
+                    <option value="1990">1990</option>
+                    <option value="1992">1992</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2021">2021</option>
+                </select>
+
+                <label for="country">Országkód:</label>
+                <select id="country" name="country">
+                    <option value="">Mind</option>
+                    <option value="URS">URS</option>
+                    <option value="BLR">BLR</option>
+                    <option value="JPN">JPN</option>
+                    <option value="HUN">HUN</option>
+                    <option value="POL">POL</option>
+                    <option value="RUS">RUS</option>
+                    <option value="RPG">RPG</option>
+                    <option value="FIN">FIN</option>
+                    <option value="DEU">DEU</option>
+                    <option value="USA">USA</option>
+                    <option value="NDK">NDK</option>
+                    <option value="UKR">UKR</option>
+                    <option value="SVN">SVN</option>
+                </select>
+
+                <label for="location">Helyszín:</label>
+                <select id="location" name="location">
+                    <option value="">Mind</option>
+                    <option value="Stuttgart">Stuttgart</option>
+                    <option value="Drezda">Drezda</option>
+                    <option value="Minszk">Minszk</option>
+                    <option value="Prága">Prága</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Grodno">Grodno</option>
+                    <option value="Lausanne">Lausanne</option>
+                    <option value="Besztercebánya">Besztercebánya</option>
+                    <option value="Szombathely">Szombathely</option>
+                    <option value="Szczecin">Szczecin</option>
+                    <option value="Zalaegerszeg">Zalaegerszeg</option>
+                    <option value="Szocsi">Szocsi</option>
+                    <option value="Adler">Adler</option>
+                    <option value="Athén">Athén</option>
+                    <option value="Edmonton">Edmonton</option>
+                    <option value="Lahti">Lahti</option>
+                    <option value="Frankfurt">Frankfurt</option>
+                    <option value="Saint-Denis">Saint-Denis</option>
+                    <option value="Dortmund">Dortmund</option>
+                    <option value="Eugene">Eugene</option>
+                    <option value="Zürich">Zürich</option>
+                    <option value="Kijev">Kijev</option>
+                    <option value="Celje">Celje</option>
+                </select>
+
+                <button type="button" onclick="applyFilters()">Keresés</button>
+            </form>
+        </div>
+
+        <table class="ranglista-table">
+            <thead>
+                <tr>
+                    <th>Helyezés</th>
+                    <th>Atléta neve</th>
+                    <th>Ország</th>
+                    <th>Legjobb dobás (m)</th>
+                    <th>Év</th>
+                    <th>Helyszín</th>
+                </tr>
+            </thead>
+            <tbody id="rankTable">
+                <tr><td>1</td><td>Yuriy Sedykh</td><td>URS</td><td>86,74</td><td>1986</td><td>Stuttgart</td></tr>
+                <tr><td>2</td><td>Szergej Litvinov</td><td>URS</td><td>86,04</td><td>1986</td><td>Drezda</td></tr>
+                <tr><td>3</td><td>Vadim Devyatovskiy</td><td>BLR</td><td>84,90</td><td>2005</td><td>Minszk</td></tr>
+                <tr><td>4</td><td>Koji Murofushi</td><td>JPN</td><td>84,86</td><td>2003</td><td>Prága</td></tr>
+                <tr><td>5</td><td>Igor Astapkovich</td><td>BLR</td><td>84,62</td><td>1992</td><td>Sevilla</td></tr>
+                <tr><td>6</td><td>Ivan Tsikhan</td><td>BLR</td><td>84,51</td><td>2008</td><td>Grodno</td></tr>
+                <tr><td>7</td><td>Igor Nikulin</td><td>URS</td><td>84,48</td><td>1990</td><td>Lausanne</td></tr>
+                <tr><td>8</td><td>Jüri Tamm</td><td>URS</td><td>84,40</td><td>1984</td><td>Besztercebánya</td></tr>
+                <tr><td>9</td><td>Adrián Annus</td><td>HUN</td><td>84,19</td><td>2003</td><td>Szombathely</td></tr>
+                <tr><td>10</td><td>Paweł Fajdek</td><td>POL</td><td>83,93</td><td>2015</td><td>Szczecin</td></tr>
+                <tr><td>11</td><td>Tibor Gécsek</td><td>HUN</td><td>83,68</td><td>1998</td><td>Zalaegerszeg</td></tr>
+                <tr><td>12</td><td>Andrej Abduvalijev</td><td>URS</td><td>83,46</td><td>1990</td><td>Szocsi</td></tr>
+                <tr><td>13</td><td>Alekszej Zagornyi</td><td>RUS</td><td>83,43</td><td>2002</td><td>Adler</td></tr>
+                <tr><td>14</td><td>Ralf Haber</td><td>RPG</td><td>83,40</td><td>1988</td><td>Athén</td></tr>
+                <tr><td>15</td><td>Szymon Ziolkowski</td><td>POL</td><td>83,38</td><td>2001</td><td>Edmonton</td></tr>
+                <tr><td>16</td><td>Olli-Pekka Karjalainen</td><td>FIN</td><td>83,30</td><td>2004</td><td>Lahti</td></tr>
+                <tr><td>17</td><td>Heinz Weis</td><td>DEU</td><td>83,04</td><td>1997</td><td>Frankfurt</td></tr>
+                <tr><td>18</td><td>Balázs Kiss</td><td>HUN</td><td>83,00</td><td>1998</td><td>Saint-Denis</td></tr>
+                <tr><td>19</td><td>Karsten Kobs</td><td>DEU</td><td>82,78</td><td>1999</td><td>Dortmund</td></tr>
+                <tr><td>20</td><td>Rudy Winkler</td><td>USA</td><td>82,71</td><td>2021</td><td>Eugene</td></tr>
+                <tr><td>21</td><td>Krisztián Pars</td><td>HUN</td><td>82,69</td><td>2014</td><td>Zürich</td></tr>
+                <tr><td>22</td><td>Günther Rodehau</td><td>NDK</td><td>82,64</td><td>1985</td><td>Kijev</td></tr>
+                <tr><td>23</td><td>Szergej Kirmaszov</td><td>RUS</td><td>82,62</td><td>1998</td><td>Celje</td></tr>
+                <tr><td>23</td><td>Andriy Skvaruk</td><td>UKR</td><td>82,62</td><td>2002</td><td>Lausanne</td></tr>
+                <tr><td>25</td><td>Primož Kozmus</td><td>SVN</td><td>82,58</td><td>2009</td><td>Stuttgart</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+       function applyFilters() {
+    const yearFilter = document.getElementById("year").value.trim(); 
+    const countryFilter = document.getElementById("country").value.trim(); 
+    const locationFilter = document.getElementById("location").value.trim(); 
+    
+    const rows = document.querySelectorAll("#rankTable tr"); 
+    
+    rows.forEach(row => {
+        const year = row.cells[4].innerText.trim(); 
+        const country = row.cells[2].innerText.trim(); 
+        const location = row.cells[5].innerText.trim(); 
+
+        const matchesYear = !yearFilter || year === yearFilter;
+        const matchesCountry = !countryFilter || country === countryFilter;
+        const matchesLocation = !locationFilter || location === locationFilter;
+
+        row.style.display = (matchesYear && matchesCountry && matchesLocation) ? "" : "none";
+    });
+}
+    </script>
+
+<footer id="footer">
+    <section>
+      <h2>Kapcsolat</h2>
+      <h4>Kövess minket</h4>
+      <ul>
+        <p><a href="https://facebook.com">Facebook</a></p>
+        <p><a href="https://twitter.com">Twitter</a></p>
+        <p><a href="https://instagram.com">Instagram</a></p>
+      </ul>
+      <h4>Impresszum</h4>
+      <p>Ezt az oldalt Bence, Levente és Boglárka készítette.</p>
+    </section>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

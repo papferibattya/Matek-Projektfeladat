@@ -61,3 +61,5 @@ const atletak = [
   function visszaFooldalra() {
     location.reload();
   }
+
+  

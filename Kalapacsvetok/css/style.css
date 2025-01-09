@@ -44,3 +44,37 @@ table tr:nth-child(even) {
 table tr:hover {
     background-color: #ddd;
 }
+
+.ranglista-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.ranglista-filters {
+    margin-bottom: 20px;
+}
+.ranglista-filters label {
+    margin-right: 10px;
+}
+.ranglista-filters select {
+    margin-right: 20px;
+    padding: 5px;
+}
+.ranglista-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.ranglista-table th, .ranglista-table td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+.ranglista-table th {
+    background-color: #352c2c;
+}
+.ranglista-table tr.hidden {
+    display: none;
+}
+.hidden {
+    display: none;
+}
